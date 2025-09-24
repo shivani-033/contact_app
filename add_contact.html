@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'style.css')}}">
+    <style>
+    
+    </style>
+</head>
+<body>
+     <h1>Add contact</h1>
+     <form method="post">
+          {{ form.hidden_tag() }}
+        {{ form.name.label }}<br>
+        {{ form.name(rows=2, cols=10) }}<br>
+        {{ form.phone.label }}<br>
+        {{ form.phone(rows=2, cols=10) }}<br>
+        {{ form.email.label }}<br>
+        {{ form.email(rows=2, cols=10) }} <br>
+        {{ form.submit() }}
+        
+     </form>
+</body>
+</html>

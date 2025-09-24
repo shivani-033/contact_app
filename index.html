@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact app</title>
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'style.css')}}">
+</head>
+<body>
+    <h1>Your contact app</h1>
+    <a href="{{url_for('add_contact')}}">add contact</a>
+    <ul>
+        {% for contact in contacts %}
+        <li>{{contact.name}}</li> <br>
+        <li>{{contact.phone}}</li> <br>
+        <li>{{contact.email}}</li> <br>
+        {% else %}
+        <li> no contact yet</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
